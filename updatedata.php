@@ -2,9 +2,11 @@
 
 // membutuhkan pemanggilan akses koneksi (mysql)
 // (DISI)
+require 'koneksi.php';
 
-// menjalankan sessions
+// menjalankan session
 // (DISI)
+session_start();
 
 // check apakah session email sudah ada atau belum.
 // jika belum maka akan diredirect ke halaman index (login)
@@ -46,11 +48,11 @@ if (isset($_POST['ubah_foto'])) {
 		// jika berhasil ubah data
 		if ($sql) {
 ?>
-			<script type="text/javascript">
-				alert('Data Berhasil Diupdate!');
-				document.location.href = 'index.php';
-			</script>
-		<?php
+<script type="text/javascript">
+alert('Data Berhasil Diupdate!');
+document.location.href = 'index.php';
+</script>
+<?php
 
 			// gagal menyimpan data
 		} else {
@@ -61,11 +63,11 @@ if (isset($_POST['ubah_foto'])) {
 		// gagal mengubah data
 	} else {
 		?>
-		<script type="text/javascript">
-			alert('Data Gagal Diupdate!');
-			document.location.href = 'index.php';
-		</script>
-	<?php
+<script type="text/javascript">
+alert('Data Gagal Diupdate!');
+document.location.href = 'index.php';
+</script>
+<?php
 	}
 
 	// jika data dirubah tanpa gambar
@@ -80,19 +82,19 @@ if (isset($_POST['ubah_foto'])) {
 	// jika data berhasil diubah
 	if ($sql) {
 	?>
-		<script type="text/javascript">
-			alert('Data Berhasil Diupdate!');
-			document.location.href = 'index.php';
-		</script>
-	<?php
+<script type="text/javascript">
+alert('Data Berhasil Diupdate!');
+document.location.href = 'index.php';
+</script>
+<?php
 
 		// jika data gagal diubah
 	} else {
 	?>
-		<script type="text/javascript">
-			alert('Data Gagal Diupdate!');
-			document.location.href = 'index.php';
-		</script>
+<script type="text/javascript">
+alert('Data Gagal Diupdate!');
+document.location.href = 'index.php';
+</script>
 <?php
 	}
 }

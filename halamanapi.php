@@ -1,13 +1,13 @@
 <?php
 require 'koneksi.php';
 session_start();
- 
+
 // check apakah session email sudah ada atau belum.
 // jika belum maka akan diredirect ke halaman index (login)
-if( empty($_SESSION['uname']) ){
+if (empty($_SESSION['uname'])) {
     header('Location: login.html');
 }
- 
+
 ?>
 
 <!doctype html>
@@ -36,32 +36,32 @@ if( empty($_SESSION['uname']) ){
     <!-- Style -->
 
     <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
 
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
         }
+    }
 
-        .nav-item img {
-            padding-left: 20%;
-        }
+    .nav-item img {
+        padding-left: 20%;
+    }
 
-        .nav-item p {
-            text-align: center;
-            text-decoration: dotted;
-        }
+    .nav-item p {
+        text-align: center;
+        text-decoration: dotted;
+    }
 
-        .table-responsive h2 {
-            text-align: center;
-        }
+    .table-responsive h2 {
+        text-align: center;
+    }
     </style>
 
     <!-- Style -->
@@ -92,10 +92,10 @@ if( empty($_SESSION['uname']) ){
                     </li>
                     <br>
                     <li class="nav-item">
-                        <p><strong>NAMA KALIAN</strong></p>
+                        <p><strong>M. AGUNG ISRA NARWIN</strong></p>
                     </li>
                     <li class="nav-item">
-                        <p>NIM KALIAN</p>
+                        <p>6706213022</p>
                     </li>
                     </li>
                 </ul>
@@ -134,8 +134,8 @@ if( empty($_SESSION['uname']) ){
                 class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2"> Data API </h1>
                 <div class="btn-toolbar mb-2 mb-md-0">
-        
-                    
+
+
                 </div>
             </div>
 
@@ -165,28 +165,28 @@ if( empty($_SESSION['uname']) ){
 
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control"
-                                    value="http://localhost/latihanapi-server/data-api.php"
-                                    id="myInputArtikel" readonly="readonly">
+                                    value="http://localhost/latihanapi-server/data-api.php" id="myInputArtikel"
+                                    readonly="readonly">
                                 <button class="btn btn-outline-success" type="button"
                                     onclick="myApiArtikel()">Salin</button>
                             </div>
 
                             <!-- function untuk copy text -->
                             <script>
-                                function myApiArtikel() {
-                                    /* Get the text field */
-                                    var copyText = document.getElementById("myInputArtikel");
+                            function myApiArtikel() {
+                                /* Get the text field */
+                                var copyText = document.getElementById("myInputArtikel");
 
-                                    /* Select the text field */
-                                    copyText.select();
-                                    copyText.setSelectionRange(0, 99999); /* For mobile devices */
+                                /* Select the text field */
+                                copyText.select();
+                                copyText.setSelectionRange(0, 99999); /* For mobile devices */
 
-                                    /* Copy the text inside the text field */
-                                    document.execCommand("copy");
+                                /* Copy the text inside the text field */
+                                document.execCommand("copy");
 
-                                    /* Alert the copied text */
-                                    alert("API Berhasil disalin");
-                                }
+                                /* Alert the copied text */
+                                alert("API Berhasil disalin");
+                            }
                             </script>
 
                         </div>
@@ -208,14 +208,14 @@ if( empty($_SESSION['uname']) ){
 
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js "
-    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf "
-    crossorigin="anonymous "></script>
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf " crossorigin="anonymous ">
+</script>
 <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
-    integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
-    crossorigin="anonymous"></script>
+    integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous">
+</script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
-    integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
-    crossorigin="anonymous"></script>
+    integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous">
+</script>
 <script src="dashboard.js"></script>
 </body>
 

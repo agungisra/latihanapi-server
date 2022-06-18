@@ -1,8 +1,10 @@
 <?php
 // membutuhkan pemanggilan akses koneksi (mysql)
 // (DISI)
+require 'koneksi.php';
 // fungsi untuk memulai session
 // (DISI)
+session_start();
  
 // variabel kosong untuk menyimpan pesan error
 $form_error = '';
@@ -15,7 +17,7 @@ if(isset($_POST['submit'])){
     $password = mysqli_real_escape_string($db, $_POST['psw']);
  
     // validasi login benar atau salah
-    if($username == 'NAMA' && $password == 'NIM'){
+    if($username == 'M. AGUNG ISRA NARWIN' && $password == '6706213022'){
  
         // jika login benar maka email akan disimpan ke session kemudian akan di redirect ke halaman profil
         $_SESSION['uname'] = $username;
@@ -28,5 +30,3 @@ if(isset($_POST['submit'])){
         echo "<script type='text/javascript'>alert('$message'); document.location.href='login.html';</script>";
     }
 }
- 
-?>
